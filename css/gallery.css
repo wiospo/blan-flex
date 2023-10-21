@@ -1,0 +1,178 @@
+.gallery {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-image: url(../img/gallery-wrap.jpg)
+}
+
+.gallery-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gallery__wrap-1 {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 50px;
+}
+
+.century-time-list {
+  margin-top: auto;
+}
+
+.gallery-cards-list {
+  display: flex;
+}
+
+.gallery-card-item {
+  margin-right: 50px;
+}
+
+.gallery-card-item:last-child {
+  margin-right: 0;
+}
+
+.gallery-page {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 65px;
+  color: #fff;
+  margin-bottom: 20px
+}
+
+.gallery__span {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 32px;
+  color: #fff;
+  margin-bottom: 11px
+}
+
+.century-time-label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #fff
+}
+
+.century-time-item {
+  cursor: pointer
+}
+
+.century-time-item:last-child {
+  margin-bottom: 0
+}
+
+.century-time-label {
+  position: relative;
+  padding-left: 24px;
+  cursor: pointer
+}
+
+.century-time-real-checkbox {
+  display: none
+}
+
+.century-time-label:hover{
+  color: #C283F3;
+}
+.century-time-label:focus:not(:hover) .century-time-real-checkbox+.century-time-custom-checkbox{
+  border-color: #C283F3;
+}
+
+.century-time-real-checkbox+.century-time-custom-checkbox {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  text-align: center;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #7e7e7e;
+  align-items: center
+}
+
+.century-time-real-checkbox+.century-time-custom-checkbox::before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background-color: #c283f3;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  transition: opacity .3s;
+  color: #c283f3
+}
+
+.century-time-real-checkbox:checked+.century-time-custom-checkbox::before {
+  opacity: 1
+}
+
+.century-time-real-checkbox:checked+.century-time-custom-checkbox {
+  border-color: #c283f3
+}
+
+.gallery__wrap-2 {
+  max-width: 1150px
+}
+
+@media (max-width: 1440px) {
+  .gallery-page {
+    margin-bottom: 16px;
+  }
+
+  .gallery-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  .gallery__wrap-1 {
+    margin-bottom: 30px;
+    justify-content: start;
+  }
+}
+
+@media (max-width: 1000px) {
+  .gallery-card-item {
+    margin-right: 34px;
+  }
+}
+
+@media (max-width: 620px) {
+  .gallery {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .gallery-page {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 38px;
+    margin-bottom: 12px;
+  }
+.gallery-img{
+  object-fit: cover;
+}
+  .gallery-cards-list{
+    flex-direction: column;
+    align-items: center;
+  }
+  .gallery-card-item{
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .gallery-card-item:last-child{
+    margin-bottom: 0;
+  }
+}
